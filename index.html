@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App by Ely</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="search-modal">
+            <div class="search-header">
+                <h1>Weather Forecast</h1>
+                <p>powered by OpenWeather API</p>
+            </div>
+            <div class="search-input">
+                <p>Search by 'City, Country' or ZIP</p>
+                <div class="search-bar">
+                    <form>
+                        <label for="search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M9.145 18.29c-5.042 0-9.145-4.102-9.145-9.145s4.103-9.145 9.145-9.145 9.145 4.103 9.145 9.145-4.102 9.145-9.145 9.145zm0-15.167c-3.321 0-6.022 2.702-6.022 6.022s2.702 6.022 6.022 6.022 6.023-2.702 6.023-6.022-2.702-6.022-6.023-6.022zm9.263 12.443c-.817 1.176-1.852 2.188-3.046 2.981l5.452 5.453 3.014-3.013-5.42-5.421z" />
+                            </svg>
+                        </label>
+                        <input type="text" id="search">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="search-results">
+
+            </div>
+        </div>
+        <div class="weather-container">
+            <div class="weather-header">
+                <div class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M9.145 18.29c-5.042 0-9.145-4.102-9.145-9.145s4.103-9.145 9.145-9.145 9.145 4.103 9.145 9.145-4.102 9.145-9.145 9.145zm0-15.167c-3.321 0-6.022 2.702-6.022 6.022s2.702 6.022 6.022 6.022 6.023-2.702 6.023-6.022-2.702-6.022-6.023-6.022zm9.263 12.443c-.817 1.176-1.852 2.188-3.046 2.981l5.452 5.453 3.014-3.013-5.42-5.421z" />
+                    </svg>
+                </div>
+                <span data-city-country>Vancouver, WA</span>
+            </div>
+            <div class="weather-main">
+                <div class="current-temp">
+                    <div class="temp-now" data-current-temp>55°F</div>
+                    <div class="temp-minmax">
+                        <p data-current-temp-min>30°F</p>
+                        <p data-current-temp-max>60°F</p>
+                    </div>
+                </div>
+                <div class="current-conditions">
+                    <img data-current-icon src="https://openweathermap.org/img/wn/09n@4x.png"
+                        alt="weather conditions icon" width="84">
+                    <span data-current-description>moderate rain</span>
+                </div>
+            </div>
+            <div class="weather-hourly">
+                <div class="hour-container">
+                    <div data-hourly-hour class="hour">NOW</div>
+                    <div data-hourly-temp class="temp">55°F</div>
+                    <div data-hourly-conditions class="conditions">Rain</div>
+                </div>
+                <div class="hour-container">
+                    <div data-hourly-hour class="hour">11 PM</div>
+                    <div data-hourly-temp class="temp">54°F</div>
+                    <div data-hourly-conditions class="conditions">Clouds</div>
+                </div>
+                <div class="hour-container">
+                    <div data-hourly-hour class="hour">1 AM</div>
+                    <div data-hourly-temp class="temp">54°F</div>
+                    <div data-hourly-conditions class="conditions">Clear</div>
+                </div>
+                <div class="hour-container">
+                    <div data-hourly-hour class="hour">3 AM</div>
+                    <div data-hourly-temp class="temp">50°F</div>
+                    <div data-hourly-conditions class="conditions">Rain</div>
+                </div>
+                <div class="hour-container">
+                    <div data-hourly-hour class="hour">5 AM</div>
+                    <div data-hourly-temp class="temp">49°F</div>
+                    <div data-hourly-conditions class="conditions">Clouds</div>
+                </div>
+                <div class="hour-container">
+                    <div data-hourly-hour class="hour">7 AM</div>
+                    <div data-hourly-temp class="temp">45°F</div>
+                    <div data-hourly-conditions class="conditions">Clear</div>
+                </div>
+            </div>
+            <div class="weather-daily">
+                <div class="shorthand">
+                    <div data-index=0 class="day-container active">
+                        <div class="date">
+                            <p data-daily-day>TODAY</p>
+                            <p data-daily-date>25 MAY 2020</p>
+                        </div>
+                        <span data-daily-temp>55°F</span>
+                    </div>
+                    <div data-index=1 class="day-container">
+                        <div class="date">
+                            <p data-daily-day>FRIDAY</p>
+                            <p data-daily-date>25 MAY 2020</p>
+                        </div>
+                        <span data-daily-temp>50°F</span>
+                    </div>
+                    <div data-index=2 class="day-container">
+                        <div class="date">
+                            <p data-daily-day>SATURDAY</p>
+                            <p data-daily-date>25 MAY 2020</p>
+                        </div>
+                        <span data-daily-temp>40°F</span>
+                    </div>
+                    <div data-index=3 class="day-container">
+                        <div class="date">
+                            <p data-daily-day>SUNDAY</p>
+                            <p data-daily-date>25 MAY 2020</p>
+                        </div>
+                        <span data-daily-temp>47°F</span>
+                    </div>
+                    <div data-index=4 class="day-container">
+                        <div class="date">
+                            <p data-daily-day>MONDAY</p>
+                            <p data-daily-date>25 MAY 2020</p>
+                        </div>
+                        <span data-daily-temp>45°F</span>
+                    </div>
+                    <div data-index=5 class="day-container">
+                        <div class="date">
+                            <p data-daily-day>TUESDAY</p>
+                            <p data-daily-date>25 MAY 2020</p>
+                        </div>
+                        <span data-daily-temp>60°F</span>
+                    </div>
+                    <div data-index=6 class="day-container">
+                        <div class="date">
+                            <p data-daily-day>WEDNESDAY</p>
+                            <p data-daily-date>25 MAY 2020</p>
+                        </div>
+                        <span data-daily-temp>65°F</span>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <div data-daily-conditions class="conditions">moderate rain</div>
+                    <div class="details">
+                        <div class="detail">
+                            <p>Feels like</p>
+                            <p data-daily-feels-like>50°F</p>
+                        </div>
+                        <div class="detail">
+                            <p>Sunrise</p>
+                            <p data-daily-sunrise>5:32:40 AM</p>
+                        </div>
+                        <div class="detail">
+                            <p>Sunset</p>
+                            <p data-daily-sunset>8:41:57 PM</p>
+                        </div>
+                        <div class="detail">
+                            <p>Humidity</p>
+                            <p data-daily-humidity>71%</p>
+                        </div>
+                        <div class="detail">
+                            <p>Wind speed</p>
+                            <p data-daily-wind>2.6 mi/hour</p>
+                        </div>
+                        <div class="detail">
+                            <p>UVI</p>
+                            <p data-daily-uvi>6.14</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/moment.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

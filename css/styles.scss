@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: #3A3ABF;
+    --secondary: #48484A;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: var(--secondary);
+    height: 100vh;
+    width: 100vw;
+    background-color: #ecf0f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 880px;
+    background-color: #ecf0f3;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow:  18px 18px 30px #d1d9e6, 
+                -18px -18px 30px #ffffff;
+}
+
+// styles for search modal
+.search-modal {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    position: absolute;
+    z-index: 2;
+    justify-items: center;
+}
+
+.search-header {
+    font-weight: 700;
+    align-self: center;
+
+    h1 {
+        font-size: 48px;
+        color: var(--theme-color);
+    }
+
+    p {
+        text-align: right;
+        font-weight: 300;
+    }
+}
+
+.search-input {
+    align-self: center;
+    p {
+        font-weight: 300;
+        margin-left: 2.5em;
+    }
+    
+}
+
+.search-bar {
+    form {
+        margin-top: 1em;
+        display: flex;
+
+
+        input {
+            padding: 0 .25em;
+            font-size: 2rem;
+            width: 250px;
+            border: 5px solid var(--theme-color);
+            color: var(--secondary);
+        }
+
+    
+        label {
+            margin-right: 1em;
+            align-self: center;
+            svg {
+                transform: scale(1.25);
+                fill: var(--theme-color);
+            }
+        }
+        button {
+            // padding: 0.5em;
+            border-style: none;
+            background-color: var(--theme-color);
+            color: white;
+            font-size: 1rem;
+            padding: 1em;
+            text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+                background-color: white;
+                color: var(--theme-color);
+            }
+        }
+    }
+}
+
+// end of modal styles
+
+// styles for the weather UI
+
+.weather-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+    .weather-header {
+        margin:  2em 3em 1em 3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .search-icon {
+            cursor: pointer;
+            background-color: var(--theme-color);
+            display: inline-block;
+            padding: .75em .75em .5em .75em;
+            svg {
+                fill: white;
+            }
+
+            &:hover {
+                background-color: #6161CB;
+            }
+        }
+        span {
+            font-size: 1.5rem;
+        }
+    }
+
+    .weather-main {
+        margin-top: 2em;
+        .current-temp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .temp-now {
+                display: inline-block;
+                color: var(--theme-color);
+                font-size: 72px;
+            }
+    
+            .temp-minmax {
+                margin-left: 1em;
+                font-weight: 300;
+                font-size: 1.5rem;
+                display: inline-block;
+                
+                p:first-child {
+                    border-bottom: 1px solid var(--secondary);
+                }
+            }
+        }
+
+        .current-conditions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            span {
+                font-size: 1.5rem;
+            }
+        }
+        
+    }
+
+    .weather-hourly {
+        margin: 2em 3em;
+        display: flex;
+        justify-content: space-between;
+        .hour-container {
+            text-align: center;
+            .hour {
+
+            }
+            .temp {
+                padding: .5em 0;
+                font-weight: 700;
+            }
+            .conditions {
+
+            }
+        }
+    }
+
+    .weather-daily {
+        display: flex;
+        background-color: var(--theme-color);
+        height: 100%;
+        .shorthand {
+            width: 50%;
+            background-color: white;
+            
+            .day-container {
+                cursor: pointer;
+                padding: .75em 1em .75em 3em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #ecf0f3;
+                color: var(--secondary);
+                .date {
+                    display: inline-block;
+
+                    p:last-child {
+                        font-weight: 300;
+                    }
+                }
+                span {
+                    font-size: 1.5rem;
+                }
+
+                &.active {
+                    background-color: var(--theme-color);
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: var(--theme-color);
+                    color: white;
+                }
+            }
+        }
+
+        .details-container {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            width: 50%;
+
+            .conditions {
+                margin: 1em 0;
+                padding-left: 2rem;
+                font-size: 1.25rem;
+                font-weight: 300;
+            }
+            .details {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                
+                .detail {
+                    padding-left: 2rem;
+                    margin: .75em 0;
+
+                    p:first-child {
+                        font-weight: 300;
+                    }
+                    p:last-child {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
