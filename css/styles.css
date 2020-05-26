@@ -324,11 +324,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .weather-container .weather-daily .details-container .details .detail {
   padding-left: 1em;
-  margin: .75em 0;
 }
 
 .weather-container .weather-daily .details-container .details .detail p:first-child {

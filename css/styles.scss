@@ -260,10 +260,11 @@ body {
             .details {
                 display: flex;
                 flex-direction: column;
+                height: 100%;
+                justify-content: space-around;
                 
                 .detail {
                     padding-left: 1em;
-                    margin: .75em 0;
 
                     p:first-child {
                         font-weight: 300;
