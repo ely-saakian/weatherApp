@@ -37,7 +37,6 @@ body {
 .search-modal {
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
     position: absolute;
     z-index: 2;
@@ -49,7 +48,7 @@ body {
         margin-bottom: 20%;
         font-weight: 700;
         align-self: center;
-        height: 50%;
+        height: 25%;
     
         h1 {
             text-align: center;

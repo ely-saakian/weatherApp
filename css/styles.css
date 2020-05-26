@@ -55,7 +55,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   width: 100%;
   position: absolute;
   z-index: 2;
@@ -76,7 +75,7 @@ body {
   font-weight: 700;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 50%;
+  height: 25%;
 }
 
 .search-modal .search-header h1 {
