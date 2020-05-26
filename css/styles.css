@@ -12,7 +12,6 @@
 }
 
 body {
-  font-size: 13px;
   font-family: Roboto, sans-serif;
   color: var(--secondary);
   height: 100vh;
@@ -34,10 +33,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
+  width: 100vw;
   height: 100%;
   background-color: white;
-  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -68,12 +66,12 @@ body {
 }
 
 .search-header h1 {
-  font-size: 48px;
+  text-align: center;
   color: var(--theme-color);
 }
 
 .search-header p {
-  text-align: right;
+  text-align: center;
   font-weight: 300;
 }
 
@@ -81,6 +79,7 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  width: 90%;
 }
 
 .search-input p {
@@ -88,35 +87,35 @@ body {
   margin-left: 2.5em;
 }
 
-.search-bar form {
+.search-input .search-bar form {
   margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.search-bar form input {
+.search-input .search-bar form input {
+  width: 60%;
   padding: 0 .25em;
   font-size: 2rem;
-  width: 250px;
   border: 5px solid var(--theme-color);
   color: var(--secondary);
 }
 
-.search-bar form label {
+.search-input .search-bar form label {
   margin-right: 1em;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.search-bar form label svg {
+.search-input .search-bar form label svg {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   fill: var(--theme-color);
 }
 
-.search-bar form button {
+.search-input .search-bar form button {
   border-style: none;
   background-color: var(--theme-color);
   color: white;
@@ -125,7 +124,7 @@ body {
   text-transform: uppercase;
 }
 
-.search-bar form button:hover {
+.search-input .search-bar form button:hover {
   cursor: pointer;
   background-color: white;
   color: var(--theme-color);
@@ -237,12 +236,16 @@ body {
   font-weight: 700;
 }
 
+.weather-container .weather-hourly .hour-container:nth-child(5),
+.weather-container .weather-hourly .hour-container:nth-child(6) {
+  display: none;
+}
+
 .weather-container .weather-daily {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: var(--theme-color);
-  height: 100%;
 }
 
 .weather-container .weather-daily .shorthand {
@@ -275,7 +278,7 @@ body {
 }
 
 .weather-container .weather-daily .shorthand .day-container span {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .weather-container .weather-daily .shorthand .day-container.active {
@@ -315,7 +318,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
 }
 
 .weather-container .weather-daily .details-container .details .detail {
@@ -329,33 +331,5 @@ body {
 
 .weather-container .weather-daily .details-container .details .detail p:last-child {
   font-weight: 700;
-}
-
-@media (max-width: 500px) {
-  body {
-    font-size: 12px;
-  }
-  #app {
-    width: 100vw;
-  }
-  .search-bar form {
-    margin-top: 1em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .search-bar form input {
-    padding: 0;
-    font-size: 1rem;
-    width: auto;
-    border: 5px solid var(--theme-color);
-    color: var(--secondary);
-  }
-  .search-header {
-    text-align: center;
-  }
-  .search-header p {
-    text-align: center;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -92,13 +92,13 @@ function renderWeatherData (data, city, country, tempMin, tempMax) {
   document.querySelectorAll('[data-daily-day]').forEach((el, index) => {
     const currentDate = new Date(data.daily[index].dt * 1000)
     const days = [
-      'SUNDAY',
-      'MONDAY',
-      'TUESDAY',
-      'WEDNESDAY',
-      'THURSDAY',
-      'FRIDAY',
-      'SATURDAY'
+      'SUN',
+      'MON',
+      'TUE',
+      'WED',
+      'THU',
+      'FRI',
+      'SAT'
     ]
     const day = days[currentDate.getDay()]
     el.innerHTML = index > 0 ? day : 'TODAY'
@@ -109,8 +109,7 @@ function renderWeatherData (data, city, country, tempMin, tempMax) {
     const currentDate = new Date(data.daily[index].dt * 1000)
     const date = currentDate.getDate()
     const month = months[currentDate.getMonth()]
-    const year = currentDate.getFullYear()
-    el.innerHTML = `${date} ${month} ${year}`
+    el.innerHTML = `${date} ${month}`
   })
 
   document.querySelectorAll('[data-daily-temp]').forEach((el, index) => {

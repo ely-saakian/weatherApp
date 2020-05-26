@@ -11,7 +11,6 @@
 }
 
 body {
-    font-size: 13px;
     font-family: Roboto, sans-serif;
     color: var(--secondary);
     height: 100vh;
@@ -25,10 +24,9 @@ body {
 #app {
     position: relative;
     display: flex;
-    width: 500px;
+    width: 100vw;
     height: 100%;
     background-color: white;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
     box-shadow:  0 0 30px #d1d9e6
@@ -50,65 +48,67 @@ body {
     align-self: center;
 
     h1 {
-        font-size: 48px;
+        text-align: center;
         color: var(--theme-color);
     }
 
     p {
-        text-align: right;
+        text-align: center;
         font-weight: 300;
     }
 }
 
 .search-input {
     align-self: center;
+    width: 90%;
+
     p {
         font-weight: 300;
         margin-left: 2.5em;
     }
+
+    .search-bar {
+        form {
+            margin-top: 1em;
+            display: flex;
     
-}
-
-.search-bar {
-    form {
-        margin-top: 1em;
-        display: flex;
-
-
-        input {
-            padding: 0 .25em;
-            font-size: 2rem;
-            width: 250px;
-            border: 5px solid var(--theme-color);
-            color: var(--secondary);
-        }
-
-    
-        label {
-            margin-right: 1em;
-            align-self: center;
-            svg {
-                transform: scale(1.25);
-                fill: var(--theme-color);
+            input {
+                width: 60%;
+                padding: 0 .25em;
+                font-size: 2rem;
+                border: 5px solid var(--theme-color);
+                color: var(--secondary);
             }
-        }
-        button {
-            // padding: 0.5em;
-            border-style: none;
-            background-color: var(--theme-color);
-            color: white;
-            font-size: 1rem;
-            padding: 1em;
-            text-transform: uppercase;
-
-            &:hover {
-                cursor: pointer;
-                background-color: white;
-                color: var(--theme-color);
+    
+        
+            label {
+                margin-right: 1em;
+                align-self: center;
+                svg {
+                    transform: scale(1.25);
+                    fill: var(--theme-color);
+                }
+            }
+            button {
+                border-style: none;
+                background-color: var(--theme-color);
+                color: white;
+                font-size: 1rem;
+                padding: 1em;
+                text-transform: uppercase;
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: white;
+                    color: var(--theme-color);
+                }
             }
         }
     }
+    
 }
+
+
 
 // end of modal styles
 
@@ -195,12 +195,15 @@ body {
 
             }
         }
+        .hour-container:nth-child(5),
+        .hour-container:nth-child(6) {
+            display: none;
+        }
     }
 
     .weather-daily {
         display: flex;
         background-color: var(--theme-color);
-        height: 100%;
         .shorthand {
             width: 50%;
             background-color: white;
@@ -221,7 +224,7 @@ body {
                     }
                 }
                 span {
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                 }
 
                 &.active {
@@ -251,7 +254,6 @@ body {
             .details {
                 display: flex;
                 flex-direction: column;
-                height: 100%;
                 
                 .detail {
                     padding-left: 2rem;
@@ -265,36 +267,6 @@ body {
                     }
                 }
             }
-        }
-    }
-}
-
-@media (max-width: 500px) {
-    body {
-        font-size: 12px;
-    }
-    #app {
-        width: 100vw;
-    }
-    .search-bar {
-        form {
-            margin-top: 1em;
-            display: flex;
-    
-    
-            input {
-                padding: 0;
-                font-size: 1rem;
-                width: auto;
-                border: 5px solid var(--theme-color);
-                color: var(--secondary);
-            }
-        }
-    }
-    .search-header {
-        text-align: center;
-        p {
-            text-align: center;
         }
     }
 }
