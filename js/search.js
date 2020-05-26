@@ -113,6 +113,10 @@ function renderWeatherData (data, city, country, tempMin, tempMax) {
     el.innerHTML = `${date} ${month}`
   })
 
+  document.querySelectorAll('[data-daily-icon]').forEach((el, index) => {
+    el.src = `https://openweathermap.org/img/wn/${data.daily[index].weather[0].icon}@2x.png`
+  })
+
   document.querySelectorAll('[data-daily-temp]').forEach((el, index) => {
     const temp = parseInt(data.daily[index].temp.max)
     el.innerHTML = `${temp}${unit}`
