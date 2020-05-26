@@ -36,6 +36,7 @@ function searchByInput (e) {
 }
 
 function displayWeather (data) {
+  document.querySelector('.search-bar input').blur()
   searchModal.style.display = 'none'
   weatherContainer.style.display = 'block'
 
