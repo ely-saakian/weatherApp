@@ -22,7 +22,7 @@ function searchByInput (e) {
   e.preventDefault()
   const searchInput = document.querySelector('.search-bar input').value.trim()
 
-  window.fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchInput}&units=imperial&appid=${apiKey}`)
+  window.fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&units=imperial&appid=${apiKey}`)
     .then(data => data.json())
     .then(data => {
       console.log(data)
