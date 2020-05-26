@@ -9,6 +9,7 @@
 :root {
   --theme-color: #3A3ABF;
   --secondary: #48484A;
+  --app-sides-margin: 1em;
 }
 
 body {
@@ -137,7 +138,9 @@ body {
 }
 
 .weather-container .weather-header {
-  margin: 2em 3em 1em 3em;
+  margin-top: 1em;
+  margin-left: var(--app-sides-margin);
+  margin-right: var(--app-sides-margin);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,7 +221,9 @@ body {
 }
 
 .weather-container .weather-hourly {
-  margin: 2em 3em;
+  margin: 2em 0;
+  margin-left: var(--app-sides-margin);
+  margin-right: var(--app-sides-margin);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,7 +260,8 @@ body {
 
 .weather-container .weather-daily .shorthand .day-container {
   cursor: pointer;
-  padding: .75em 1em .75em 3em;
+  padding: .75em 1em .75em 0;
+  padding-left: var(--app-sides-margin);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,8 +310,8 @@ body {
 }
 
 .weather-container .weather-daily .details-container .conditions {
+  text-align: center;
   margin: 1em 0;
-  padding-left: 2rem;
   font-size: 1.25rem;
   font-weight: 300;
 }
@@ -321,7 +327,7 @@ body {
 }
 
 .weather-container .weather-daily .details-container .details .detail {
-  padding-left: 2rem;
+  padding-left: 1em;
   margin: .75em 0;
 }
 
