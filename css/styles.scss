@@ -249,6 +249,12 @@ body {
                     background-color: var(--theme-color);
                     color: white;
                 }
+
+                .icon-temp {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
             }
         }
 
