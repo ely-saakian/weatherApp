@@ -48,54 +48,78 @@ body {
 }
 
 .search-modal {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   width: 100%;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
   position: absolute;
   z-index: 2;
-  justify-items: center;
 }
 
-.search-header {
+.search-modal .search-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 20%;
   font-weight: 700;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  height: 50%;
 }
 
-.search-header h1 {
+.search-modal .search-header h1 {
   text-align: center;
   color: var(--theme-color);
 }
 
-.search-header p {
+.search-modal .search-header p {
   text-align: center;
   font-weight: 300;
 }
 
-.search-input {
+.search-modal .search-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 50%;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  justify-self: center;
   width: 90%;
 }
 
-.search-input p {
+.search-modal .search-input p {
   font-weight: 300;
   margin-left: 2.5em;
 }
 
-.search-input .search-bar form {
+.search-modal .search-input .search-bar form {
   margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.search-input .search-bar form input {
+.search-modal .search-input .search-bar form input {
   width: 60%;
   padding: 0 .25em;
   font-size: 2rem;
@@ -103,20 +127,20 @@ body {
   color: var(--secondary);
 }
 
-.search-input .search-bar form label {
+.search-modal .search-input .search-bar form label {
   margin-right: 1em;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.search-input .search-bar form label svg {
+.search-modal .search-input .search-bar form label svg {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   fill: var(--theme-color);
 }
 
-.search-input .search-bar form button {
+.search-modal .search-input .search-bar form button {
   border-style: none;
   background-color: var(--theme-color);
   color: white;
@@ -125,7 +149,7 @@ body {
   text-transform: uppercase;
 }
 
-.search-input .search-bar form button:hover {
+.search-modal .search-input .search-bar form button:hover {
   cursor: pointer;
   background-color: white;
   color: var(--theme-color);

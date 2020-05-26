@@ -35,80 +35,88 @@ body {
 
 // styles for search modal
 .search-modal {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-    grid-template-rows: repeat(3, 1fr);
     position: absolute;
     z-index: 2;
-    justify-items: center;
-}
 
-.search-header {
-    font-weight: 700;
-    align-self: center;
-
-    h1 {
-        text-align: center;
-        color: var(--theme-color);
-    }
-
-    p {
-        text-align: center;
-        font-weight: 300;
-    }
-}
-
-.search-input {
-    align-self: center;
-    width: 90%;
-
-    p {
-        font-weight: 300;
-        margin-left: 2.5em;
-    }
-
-    .search-bar {
-        form {
-            margin-top: 1em;
-            display: flex;
+    .search-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 20%;
+        font-weight: 700;
+        align-self: center;
+        height: 50%;
     
-            input {
-                width: 60%;
-                padding: 0 .25em;
-                font-size: 2rem;
-                border: 5px solid var(--theme-color);
-                color: var(--secondary);
-            }
+        h1 {
+            text-align: center;
+            color: var(--theme-color);
+        }
     
-        
-            label {
-                margin-right: 1em;
-                align-self: center;
-                svg {
-                    transform: scale(1.25);
-                    fill: var(--theme-color);
-                }
-            }
-            button {
-                border-style: none;
-                background-color: var(--theme-color);
-                color: white;
-                font-size: 1rem;
-                padding: 1em;
-                text-transform: uppercase;
-    
-                &:hover {
-                    cursor: pointer;
-                    background-color: white;
-                    color: var(--theme-color);
-                }
-            }
+        p {
+            text-align: center;
+            font-weight: 300;
         }
     }
     
+    .search-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 50%;
+        align-self: center;
+        justify-self: center;
+        width: 90%;
+    
+        p {
+            font-weight: 300;
+            margin-left: 2.5em;
+        }
+    
+        .search-bar {
+            form {
+                margin-top: 1em;
+                display: flex;
+        
+                input {
+                    width: 60%;
+                    padding: 0 .25em;
+                    font-size: 2rem;
+                    border: 5px solid var(--theme-color);
+                    color: var(--secondary);
+                }
+        
+            
+                label {
+                    margin-right: 1em;
+                    align-self: center;
+                    svg {
+                        transform: scale(1.25);
+                        fill: var(--theme-color);
+                    }
+                }
+                button {
+                    border-style: none;
+                    background-color: var(--theme-color);
+                    color: white;
+                    font-size: 1rem;
+                    padding: 1em;
+                    text-transform: uppercase;
+        
+                    &:hover {
+                        cursor: pointer;
+                        background-color: white;
+                        color: var(--theme-color);
+                    }
+                }
+            }
+        }
+        
+    }
 }
-
 
 
 // end of modal styles
