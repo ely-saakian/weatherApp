@@ -83,11 +83,6 @@ body {
   color: var(--theme-color);
 }
 
-.search-modal .search-header p {
-  text-align: center;
-  font-weight: 300;
-}
-
 .search-modal .search-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,6 +111,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search-modal .search-input .search-bar form input {
