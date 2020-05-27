@@ -30,7 +30,6 @@ body {
     background-color: white;
     justify-content: center;
     align-items: center;
-    box-shadow:  0 0 30px #d1d9e6
 }
 
 // styles for search modal
@@ -208,10 +207,6 @@ body {
 
             }
         }
-        .hour-container:nth-child(5),
-        .hour-container:nth-child(6) {
-            display: none;
-        }
     }
 
     .weather-daily {
@@ -289,5 +284,18 @@ body {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 499px) {
+    .hour-container:nth-child(5),
+    .hour-container:nth-child(6) {
+        display: none;
+    }
+}
+
+@media (min-width: 500px) {
+    .hour-container {
+        display: block;
     }
 }

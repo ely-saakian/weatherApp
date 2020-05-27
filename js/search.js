@@ -1,13 +1,3 @@
-// query by anything to get coords for the city
-// with their api key
-// https://openweathermap.org/data/2.5/find?q=98661&appid=439d4b804bc8187953eb36d2a8c26a02
-
-// one call by coords
-// https://api.openweathermap.org/data/2.5/onecall?lat=45.6418&lon=-122.6251&exclude=minutely&units=imperial
-
-// api key
-// a3345aba730886077c25b145c5518740
-
 const apiKey = 'a3345aba730886077c25b145c5518740'
 const searchButton = document.querySelector('.search-bar button')
 const searchIcon = document.querySelector('.search-icon')

@@ -43,8 +43,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 0 30px #d1d9e6;
-          box-shadow: 0 0 30px #d1d9e6;
 }
 
 .search-modal {
@@ -269,11 +267,6 @@ body {
   font-weight: 700;
 }
 
-.weather-container .weather-hourly .hour-container:nth-child(5),
-.weather-container .weather-hourly .hour-container:nth-child(6) {
-  display: none;
-}
-
 .weather-container .weather-daily {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,5 +372,18 @@ body {
 
 .weather-container .weather-daily .details-container .details .detail p:last-child {
   font-weight: 700;
+}
+
+@media (max-width: 499px) {
+  .hour-container:nth-child(5),
+  .hour-container:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .hour-container {
+    display: block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
