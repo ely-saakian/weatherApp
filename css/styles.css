@@ -58,6 +58,10 @@ body {
   width: 100%;
   position: absolute;
   z-index: 2;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search-modal .search-header {
@@ -68,19 +72,23 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-bottom: 20%;
   font-weight: 700;
+  height: 50%;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search-modal .search-header h1 {
   text-align: center;
   color: var(--theme-color);
+}
+
+.search-modal .search-header p {
+  font-weight: 300;
+  text-align: right;
 }
 
 .search-modal .search-input {
@@ -94,11 +102,10 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 50%;
   -ms-flex-item-align: center;
       align-self: center;
-  justify-self: center;
   width: 90%;
+  height: 50%;
 }
 
 .search-modal .search-input p {
