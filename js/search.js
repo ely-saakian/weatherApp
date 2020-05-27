@@ -145,7 +145,7 @@ function updateDetails (data, el, unit) {
 }
 
 function showModal () {
-  searchModal.style.display = 'grid'
+  searchModal.style.display = 'flex'
   document.querySelector('.search-bar input').focus()
   weatherContainer.style.display = 'none'
 }
