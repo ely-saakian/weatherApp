@@ -288,8 +288,8 @@ body {
 }
 
 @media (max-width: 499px) {
-    .hour-container:nth-child(5),
-    .hour-container:nth-child(6) {
+    .hour-container:nth-child(2),
+    .hour-container:nth-child(5) {
         display: none;
     }
 }
